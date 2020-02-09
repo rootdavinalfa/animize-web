@@ -1,6 +1,6 @@
 <template>
     <div id="animze">
-        <CarouselCard :interval="7000" height="300px" arrow="always" v-model="sli" @change="currentPage">
+        <CarouselCard :interval="7000" height="350px" arrow="always" v-model="sli" @change="currentPage">
             <CarouselCardItem v-for="(slide, index) in slides" :key="index">
                 <div class="animebg" v-bind:style="{'background-image': 'url(' + slide.cover + ')'}"></div>
                 <div class="animedata" @click.prevent="gotoPackage">
@@ -43,14 +43,12 @@
                 sli :0,
                 slides: [],
                 urlepisode: process.env.VUE_APP_APIURL + '/anim/list/package/page/1',
-                rows: [1, 2, 3],
-                columns: [1, 2, 3]
             }
         },
         mounted() {
             var dataEpisode = httpmake.makeGETrequest(this.urlepisode)
             dataEpisode.then((data) => {
-                console.log(data)
+                //console.log(data)
                 this.slides = data.anim
             })
         },

@@ -1,7 +1,6 @@
 <template>
     <div id="home-index">
         <vue-headful title="Animize - Teman Ngewibu anda" description="Home" />
-        <navbar></navbar>
         <banner></banner>
         <b-container fluid class="bv-example-row">
             <b-row>
@@ -19,13 +18,11 @@
     </div>
 </template>
 <script>
-    import navbar from '@/components/frame/navbar.vue'
     import banner from '@/components/frame/banner.vue'
     import epframe from '@/components/frame/anim/episode.vue'
     import anframe from '@/components/frame/anim/anime.vue'
     export default {
         components: {
-            navbar,
             banner,
             epframe,
             anframe,

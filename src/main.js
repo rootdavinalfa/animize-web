@@ -9,6 +9,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 import VueRouter from 'vue-router'
 import home from '@/components/index/home.vue'
+import play from '@/components/index/play.vue'
 import vueHeadful from 'vue-headful'
 import {
   CarouselCard,
@@ -30,6 +31,8 @@ Vue.use(require('vue-cookies'))
 const router = new VueRouter({
   routes:[
     {path:'/',component:home,name:'home'},
+    //Anim section
+    {path:'/anim/play/:idplay',component:play,name:'Anime Player'},
   ]
 })
 new Vue({

@@ -13,8 +13,8 @@
 
                 </div>
                 <template v-slot:img>
-                    <b-img-lazy class="d-block img-fluid w-100" fluid thumbnail width="1024" height="300"
-                        :src="slide.thumbnail" alt="image slot" @click.prevent="gotoPlay"></b-img-lazy>
+                    <img class="d-block img-fluid w-100" fluid thumbnail width="1024" height="300"
+                        :src="slide.thumbnail" alt="image slot" @click.prevent="gotoPlay">
                 </template>
             </b-carousel-slide>
         </b-carousel>
@@ -27,20 +27,21 @@
             return {
                 sli: 0,
                 slides: [],
-                urlepisode: process.env.VUE_APP_APIURL + '/anim/list/page/1',
-                rows: [1, 2, 3],
-                columns: [1, 2, 3]
+                urlepisode: process.env.VUE_APP_APIURL + '/anim/list/page/1'
             }
         },
         mounted() {
             var dataEpisode = httpmake.makeGETrequest(this.urlepisode)
             dataEpisode.then((data) => {
+                console.log(data)
                 this.slides = data.anim
             })
         },
         methods: {
             gotoPlay() {
-                console.log(this.slides[this.sli].id_anim)
+                this.$router.push({
+                    path:'anim/play/'+this.slides[this.sli].id_anim
+                })
             }
         }
     }

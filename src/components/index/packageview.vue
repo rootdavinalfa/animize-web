@@ -1,6 +1,6 @@
 <template>
     <div id="packageview">
-        <vue-headful title="Animize Play" description="Watch Anime" />
+        <vue-headful v-if="!waiting" :title="'Animize - '+anims.name_catalogue" :description="anims.synopsis" />
         <div class="loading" v-if="waiting">
             <h1>Loading</h1>
             <b-spinner label="Loading..."></b-spinner>
@@ -45,7 +45,7 @@
                                     {{anims.synopsis}}
                                 </b-card-text>
 
-                                <b-button :href="'https://myanimelist.net/anime/'+anims.mal_id" variant="primary">Go to
+                                <b-button target="_blank" :href="'https://myanimelist.net/anime/'+anims.mal_id" variant="primary">Go to
                                     MyAnimeList</b-button>
                             </b-card>
                         </b-col>
@@ -53,7 +53,7 @@
                     </b-row>
                     <b-row>
                         <b-col>
-                            <playlist></playlist>
+                            <playlist :idPack="id"></playlist>
                         </b-col>
                     </b-row>
                 </b-container>

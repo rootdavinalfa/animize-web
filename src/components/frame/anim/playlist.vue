@@ -37,11 +37,14 @@
 <script>
     import httpmake from '@/library/network.js'
     export default {
+        props:{
+            idPack : String
+        },
         data() {
             return {
                 waiting: true,
                 animok: false,
-                urlplaylist: process.env.VUE_APP_APIURL + '/anim/detail/playlist/' + this.$route.params.idpack,
+                urlplaylist: process.env.VUE_APP_APIURL + '/anim/detail/playlist/' + this.idPack,
                 anims: [],
             }
         },

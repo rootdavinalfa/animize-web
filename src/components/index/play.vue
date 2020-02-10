@@ -1,6 +1,6 @@
 <template>
     <div id="player">
-        <vue-headful title="Animize Play" description="Watch Anime" />
+        <vue-headful v-if="!waiting" :title="anims.name_catalogue+' - Ep '+anims.episode_anim" description="Watch Anime" />
         <div class="loading" v-if="waiting">
             <h1>Loading</h1>
             <b-spinner label="Loading..."></b-spinner>
@@ -26,8 +26,10 @@
                         <b-col>
                             <b-jumbotron fluid header-level="4" :header="anims.name_catalogue"
                                 :lead="'Episode: '+anims.episode_anim+' ,Rating: '+anims.rating">
-                                <b-button variant="primary" :href="anims.source">Download Sub Indo 480p</b-button>
+                                <b-button variant="outline-success" :to="'/anim/package/'+anims.package_anim">See Package</b-button>
+                                <hr>
                                 <p>{{anims.synopsis}}</p>
+                                <b-button variant="primary" :href="anims.source">Download Sub Indo 480p</b-button>
                             </b-jumbotron>
                         </b-col>
                     </b-row>
@@ -53,7 +55,7 @@
             }
         },
         components: {
-            vuePlayer
+            vuePlayer,
         },
 
         mounted() {

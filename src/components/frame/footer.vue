@@ -27,7 +27,8 @@
 
                         <ul class="list-unstyled">
                             <li>
-                                <b-button href="https://play.google.com/store/apps/details?id=ml.dvnlabs.animize.ima">Animize Android APP</b-button>
+                                <b-button variant="success" href="https://play.google.com/store/apps/details?id=ml.dvnlabs.animize.ima">
+                                    Animize Android APP</b-button>
                             </li>
                         </ul>
 
@@ -58,14 +59,16 @@
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css?family=Slackey&display=swap');
-h1 {
-    font-family: 'Slackey', cursive;
-    font-size: 2em;
-  }
-footer{
-color: white;
-    background: rgb(37, 73, 120);
-    background: linear-gradient(90deg, rgba(37, 73, 120, 1) 0%, rgba(33, 31, 203, 1) 19%, rgba(41, 41, 167, 1) 37%, rgba(7, 44, 144, 1) 48%, rgba(7, 51, 149, 1) 58%, rgba(6, 57, 153, 1) 68%, rgba(56, 138, 154, 1) 100%);
-}
+    @import url('https://fonts.googleapis.com/css?family=Slackey&display=swap');
+
+    h1 {
+        font-family: 'Slackey', cursive;
+        font-size: 2em;
+    }
+
+    footer {
+        color: white;
+        background-color: #FF3CAC;
+        background-image: linear-gradient(270deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    }
 </style>

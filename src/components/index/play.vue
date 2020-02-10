@@ -26,7 +26,7 @@
                         <b-col>
                             <b-jumbotron fluid header-level="4" :header="anims.name_catalogue"
                                 :lead="'Episode: '+anims.episode_anim+' ,Rating: '+anims.rating">
-                                <b-button variant="primary" :href="anims.source">Download 480p</b-button>
+                                <b-button variant="primary" :href="anims.source">Download Sub Indo 480p</b-button>
                                 <p>{{anims.synopsis}}</p>
                             </b-jumbotron>
                         </b-col>
@@ -71,19 +71,6 @@
     }
 </script>
 <style scoped>
-    .fade-enter-active,
-    .fade-leave-active {
-        transition: opacity .5s;
-    }
-
-    .fade-enter,
-    .fade-leave-to
-
-    /* .fade-leave-active below version 2.1.8 */
-        {
-        opacity: 0;
-    }
-
     .col {
         padding: 0px;
     }

@@ -1,6 +1,10 @@
 <template>
     <div id="episode">
-        <b-carousel id="carousel-episode" :interval="4000" controls background="#ffff"
+        <div class="loading" v-if="waiting">
+            <b-spinner></b-spinner>
+        </div>
+        <transition name="fade">
+            <b-carousel v-if="animok" id="carousel-episode" :interval="4000" controls background="#ffff"
             style="text-shadow: 1px 1px 2px #333;" v-model="sli" img-width="1024" img-height="300">
 
             <b-carousel-slide v-for="(slide, index) in slides" :key="index">
@@ -18,6 +22,7 @@
                 </template>
             </b-carousel-slide>
         </b-carousel>
+        </transition>
     </div>
 </template>
 <script>
@@ -27,14 +32,19 @@
             return {
                 sli: 0,
                 slides: [],
+                 waiting: true,
+                animok: false,
                 urlepisode: process.env.VUE_APP_APIURL + '/anim/list/page/1'
             }
         },
         mounted() {
             var dataEpisode = httpmake.makeGETrequest(this.urlepisode)
             dataEpisode.then((data) => {
-                console.log(data)
-                this.slides = data.anim
+                if(!data.error){
+                    this.waiting = false
+                    this.animok = true
+                    this.slides = data.anim
+                }
             })
         },
         methods: {
@@ -63,5 +73,9 @@
         background-repeat: no-repeat;
         background-position: 50% 50%;
 
+    }
+    .loading{
+        text-align: center;
+        height: 350px;
     }
 </style>

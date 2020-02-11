@@ -7,7 +7,7 @@
         </div>
         <div v-if="notfound && !waiting">
             <b-jumbotron bg-variant="danger" text-variant="light" header="Not Found"
-                :lead="'ID:'+ id +' Seem not in the place'">
+                :lead="'Your Query:'+ querys +' Seem not in the place'">
                 <p>Don't fooling me!,if you see this page please give up.We wont fix this</p>
             </b-jumbotron>
         </div>
@@ -57,32 +57,49 @@
 <script>
     import httpmake from '@/library/network.js'
     export default {
+        beforeRouteUpdate(to, from, next) {
+            this.querys = to.params.query
+            this.urlsearch =  process.env.VUE_APP_APIURL + '/anim/search/package/' + this.querys
+            this.fetchData()
+            next()
+        },
         data() {
             return {
                 querys: this.$route.params.query,
                 waiting: true,
                 notfound: true,
                 animok: false,
-                urlsearch: process.env.VUE_APP_APIURL + '/anim/search/package/' + this.$route.params.query,
+                urlsearch: String,
                 packages: [],
             }
         },
         mounted() {
-            var dataSearch = httpmake.makeGETrequest(this.urlsearch)
-            dataSearch.then((data) => {
-                this.waiting = false
-                if (!data.error) {
-                    this.notfound = false
-                    this.animok = true
-                    this.packages = data.package
-                }
-            })
+            this.fetchData()
         },
         methods: {
             itemClick(index) {
                 this.$router.push({
                     path: '/anim/package/' + this.packages[index].package_anim
                 })
+            },
+            fetchData() {
+                this.clear()
+                this.urlsearch =  process.env.VUE_APP_APIURL + '/anim/search/package/' + this.querys
+                var dataSearch = httpmake.makeGETrequest(this.urlsearch)
+                dataSearch.then((data) => {
+                    this.waiting = false
+                    if (!data.error) {
+                        this.notfound = false
+                        this.animok = true
+                        this.packages = data.package
+                    }
+                })
+            },
+            clear() {
+                this.waiting = true
+                this.notfound = true
+                this.animok = false
+                this.packages = null
             }
         }
 
@@ -115,5 +132,10 @@
 
     .card {
         margin: 20px;
+    }
+    .spinner-border {
+        margin: 30px;
+        width: 20rem;
+        height: 20rem;
     }
 </style>

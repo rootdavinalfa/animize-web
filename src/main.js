@@ -14,6 +14,8 @@ import home from '@/components/index/home.vue'
 import play from '@/components/index/play.vue'
 import packs from '@/components/index/packageview.vue'
 import search from '@/components/index/search.vue'
+import newp from '@/components/index/new.vue'
+import genre from '@/components/index/genre.vue'
 
 import vueHeadful from 'vue-headful'
 import {
@@ -47,6 +49,18 @@ const router = new VueRouter({
       name: 'home',
       props: true
     },
+    {
+      path: '/new/:page?',
+      component: newp,
+      name: 'new',
+      props: true
+    },
+    {
+      path: '/genre',
+      component: genre,
+      name: 'genre',
+      props: true
+    },
     //Anim section
     {
       path: '/anim/play/:idplay',
@@ -61,7 +75,7 @@ const router = new VueRouter({
       name: 'Anime Package'
     },
     {
-      path: '/search/:query',
+      path: '/search/:query?',
       component: search,
       props: true,
       name: 'Anime Search',

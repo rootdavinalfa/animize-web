@@ -42,8 +42,7 @@
             <!-- Footer Links -->
 
             <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                <b-button href="https://dvnlabs.ml" variant="info"> DVNLabs</b-button>
+            <div class="footer-copyright text-center py-3">© 2020 Copyright : Animize Team
             </div>
             <!-- Copyright -->
 

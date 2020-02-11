@@ -2,14 +2,14 @@
     <div id="home-index">
         <vue-headful title="Animize - Teman Ngewibu anda" description="Home" />
         <banner></banner>
-        <b-container fluid class="bv-example-row">
+        <b-container fluid>
             <b-row>
                 <b-col sm="6">
-                    <h1>New Releases</h1>
+                    <h1>New Releases <b-badge variant="danger">New</b-badge></h1>
                     <anframe></anframe>
                 </b-col>
                 <b-col sm="6">
-                    <h1>New Uploaded</h1>
+                    <h1>New Uploaded <b-badge variant="success">New</b-badge></h1>
                     <epframe></epframe>
                 </b-col>
             </b-row>

@@ -126,7 +126,7 @@
         filter: blur(8px);
         -webkit-filter: blur(8px);
         width: 100%;
-        height: 250px;
+        height: 350px;
     }
 
     .header-title {

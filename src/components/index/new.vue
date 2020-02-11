@@ -4,7 +4,12 @@
         <b-jumbotron header="New Released" lead="New released / new added anime to Animize">
             <p>Below will be new added Anime by Animize admin.Check It Out!</p>
         </b-jumbotron>
-        <b-card img-fluid>
+        <div class="loading" v-if="waiting_package">
+            <h1>Loading</h1>
+            <b-spinner label="Loading..."></b-spinner>
+        </div>
+        <transition name="fade">
+            <b-card v-if="packageok" img-fluid>
             <h3>Found : {{packages.length}} Items</h3>
             <hr>
             <b-card-text>
@@ -51,6 +56,7 @@
                 </b-container>
             </b-card-text>
         </b-card>
+        </transition>
     </div>
 </template>
 

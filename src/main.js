@@ -43,6 +43,7 @@ Vue.use(require('vue-cookies'))
 
 //Defining route
 const router = new VueRouter({
+  mode: 'history',
   routes: [{
       path: '/',
       component: home,

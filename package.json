@@ -13,6 +13,7 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.4.0",
+    "connect-history-api-fallback": "^1.6.0",
     "core-js": "^3.6.4",
     "express": "^4.17.1",
     "vue": "^2.6.11",

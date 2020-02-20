@@ -56,7 +56,7 @@ const router = new VueRouter({
       props: true
     },
     {
-      path: '/genre',
+      path: '/genre/:genname?',
       component: genre,
       name: 'genre',
       props: true

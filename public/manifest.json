@@ -5,7 +5,7 @@
   "lang": "id-ID",
   "dir": "ltr",
   "scope": "./",
-  "start_url": "index.html",
+  "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#ffffff",

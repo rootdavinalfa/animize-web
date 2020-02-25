@@ -1,0 +1,25 @@
+{
+  "name": "Animize - Teman Ngewibu Anda",
+  "short_name": "Animize",
+  "description": "Animize PWA",
+  "lang": "id-ID",
+  "dir": "ltr",
+  "scope": "./",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#128ffc",
+  "icons": [{
+    "src": "animize.png",
+    "sizes": "144x144",
+    "type": "image/png",
+    "density": "1.0"
+  }],
+  "prefer_related_applications": true,
+  "related_applications": [{
+    "platform": "play",
+    "url": "https://play.google.com/store/apps/details?id=ml.dvnlabs.animize.ima",
+    "id": "ml.dvnlabs.animize.ima"
+  }]
+}

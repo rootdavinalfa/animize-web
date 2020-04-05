@@ -42,7 +42,7 @@
             <!-- Footer Links -->
 
             <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">© 2020 Copyright : Animize Team
+            <div class="footer-copyright text-center py-3">2020 Created by : Animize Team
             </div>
             <!-- Copyright -->
 
@@ -67,7 +67,7 @@
 
     footer {
         color: white;
-        background-color: #FF3CAC;
+        background-color: rgb(14, 11, 12);
         background-image: linear-gradient(270deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
     }
 </style>

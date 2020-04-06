@@ -18,7 +18,8 @@
                             </b-row>
                             <b-row align-v="center">
                                 <b-col md="auto">
-                                    <b-img-lazy :src="slide.cover" blank-src="/pimg.png" fluid width="100%" height="100%"></b-img-lazy>
+                                    <b-img-lazy :src="slide.cover" blank-src="/pimg.png" fluid width="100%"
+                                        height="100%"></b-img-lazy>
                                 </b-col>
                                 <b-col cols="8">
                                     <h3
@@ -37,6 +38,7 @@
                             </b-row>
                         </b-container>
                     </div>
+
                 </CarouselCardItem>
             </CarouselCard>
         </transition>
@@ -111,7 +113,8 @@
         box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         text-align: center;
     }
-    .loading{
+
+    .loading {
         text-align: center;
         height: 350px;
     }

@@ -5,23 +5,26 @@
         </div>
         <transition name="fade">
             <b-carousel v-if="animok" id="carousel-episode" :interval="4000" controls background="#ffff"
-            style="text-shadow: 1px 1px 2px #333;" v-model="sli" img-width="1024" img-height="300">
+                style="text-shadow: 1px 1px 2px #333;" v-model="sli" img-width="1024" img-height="300">
 
-            <b-carousel-slide v-for="(slide, index) in slides" :key="index">
-                <div id="episodeinfo" style="text-overflow: ellipsis;">
+                <b-carousel-slide v-for="(slide, index) in slides" :key="index">
+                    <div id="episodeinfo" style="text-overflow: ellipsis;">
 
-                    <h3 style="display:block;text-overflow: ellipsis;width:100%;overflow: hidden; white-space: nowrap;">
-                        {{slide.name_anim}}
-                    </h3>
-                    <h4>Episode: {{slide.episode_anim}}</h4>
+                        <h3
+                            style="display:block;text-overflow: ellipsis;width:100%;overflow: hidden; white-space: nowrap;">
+                            {{slide.name_anim}}
+                        </h3>
+                        <h4>Episode: {{slide.episode_anim}}</h4>
 
-                </div>
-                <template v-slot:img>
-                    <b-img-lazy class="d-block img-fluid w-100" fluid thumbnail width="1024" height="300"
-                        :src="slide.thumbnail" blank-src="/pimg.png" alt="image slot" @click.prevent="gotoPlay"/>
-                </template>
-            </b-carousel-slide>
-        </b-carousel>
+                    </div>
+                    <template v-slot:img>
+                        <div @click.prevent="gotoPlay">
+                            <b-img-lazy class="img-fluid w-100" fluid thumbnail width="1024" height="300"
+                                :src="slide.thumbnail" blank-src="/pimg.png" alt="image slot" />
+                        </div>
+                    </template>
+                </b-carousel-slide>
+            </b-carousel>
         </transition>
     </div>
 </template>
@@ -32,7 +35,7 @@
             return {
                 sli: 0,
                 slides: [],
-                 waiting: true,
+                waiting: true,
                 animok: false,
                 urlepisode: process.env.VUE_APP_APIURL + '/anim/list/page/1'
             }
@@ -40,7 +43,7 @@
         mounted() {
             var dataEpisode = httpmake.makeGETrequest(this.urlepisode)
             dataEpisode.then((data) => {
-                if(!data.error){
+                if (!data.error) {
                     this.waiting = false
                     this.animok = true
                     this.slides = data.anim
@@ -49,8 +52,9 @@
         },
         methods: {
             gotoPlay() {
+                console.log("CLICKED EPISODE!")
                 this.$router.push({
-                    path:'anim/play/'+this.slides[this.sli].id_anim
+                    path: 'anim/play/' + this.slides[this.sli].id_anim
                 })
             }
         }
@@ -74,7 +78,8 @@
         background-position: 50% 50%;
 
     }
-    .loading{
+
+    .loading {
         text-align: center;
         height: 350px;
     }

@@ -18,7 +18,7 @@
                         <b-col v-for="(slide, index) in packages" :key="index" @click.prevent="clickPackage(index)">
                             <b-row class="hvr-grow">
                                 <b-col>
-                                    <b-img-lazy :src="slide.cover" fluid width="100%" height="100%">
+                                    <b-img-lazy :src="slide.cover" blank-src="/pimg.png" fluid width="100%" height="100%">
                                     </b-img-lazy>
                                 </b-col>
                                 <b-col>

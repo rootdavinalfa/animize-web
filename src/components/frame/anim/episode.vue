@@ -17,8 +17,8 @@
 
                 </div>
                 <template v-slot:img>
-                    <img class="d-block img-fluid w-100" fluid thumbnail width="1024" height="300"
-                        :src="slide.thumbnail" alt="image slot" @click.prevent="gotoPlay">
+                    <b-img-lazy class="d-block img-fluid w-100" fluid thumbnail width="1024" height="300"
+                        :src="slide.thumbnail" blank-src="/pimg.png" alt="image slot" @click.prevent="gotoPlay"/>
                 </template>
             </b-carousel-slide>
         </b-carousel>

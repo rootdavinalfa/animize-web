@@ -21,7 +21,7 @@
                     </b-row>
                     <b-row>
                         <b-col md="auto">
-                            <b-img-lazy :src="anims.cover" fluid height="200%"></b-img-lazy>
+                            <b-img-lazy :src="anims.cover" blank-src="/pimg.png" fluid height="200%"></b-img-lazy>
                         </b-col>
                         <b-col>
                             <b-jumbotron fluid header-level="4" :header="anims.name_catalogue"

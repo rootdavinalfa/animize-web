@@ -18,7 +18,7 @@
                             </b-row>
                             <b-row align-v="center">
                                 <b-col md="auto">
-                                    <b-img-lazy :src="slide.cover" fluid width="100%" height="100%"></b-img-lazy>
+                                    <b-img-lazy :src="slide.cover" blank-src="/pimg.png" fluid width="100%" height="100%"></b-img-lazy>
                                 </b-col>
                                 <b-col cols="8">
                                     <h3

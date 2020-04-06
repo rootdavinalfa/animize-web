@@ -13,7 +13,7 @@
                             <b-col id="items-play" v-for="(data, index) in anims" :key="index">
                                 <b-row>
                                     <b-col md="auto">
-                                        <b-img-lazy :src="data.thumbnail" fluid width="100%" height="100%"></b-img-lazy>
+                                        <b-img-lazy :src="data.thumbnail" blank-src="/pimg.png" fluid width="100%" height="100%"></b-img-lazy>
                                     </b-col>
                                     <b-col>
                                         <b-row>

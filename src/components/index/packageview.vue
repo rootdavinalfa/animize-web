@@ -20,7 +20,7 @@
                                 <div class="header-bg" v-bind:style="{'background-image': 'url(' + anims.cover + ')'}">
                                 </div>
                                 <div class="header-title">
-                                    <b-img-lazy :src="anims.cover" fluid height="100%"></b-img-lazy>
+                                    <b-img-lazy :src="anims.cover" blank-src="/pimg.png" fluid height="100%"></b-img-lazy>
                                     <div>
                                         <h1>{{anims.name_catalogue}}</h1>
                                         <h3>Episode: {{anims.total_ep_anim}}</h3>

@@ -1,24 +1,17 @@
-# animize
 
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+# Animize Web
+![Animize Web CI](https://github.com/rootdavinalfa/animize-web/workflows/Animize%20Web%20CI/badge.svg)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Animize is Application to streaming Anime online free without ads. Right now just served on Indonesia language.
 
-### Lints and fixes files
-```
-npm run lint
-```
+This repository currently deployed on Heroku & Firebase Hosting.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## LEGAL
+Copyright 2019 - 2020 Davin Alfarizky Putra Basudewa
+**Don't upload** any fork ,source on any other paltform.
+
+
+## Contribute
+You can make issues or make a PR for improving this project.
+

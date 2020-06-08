@@ -11,25 +11,25 @@
   "dependencies": {
     "@algoz098/vue-player": "^0.4.3",
     "axios": "^0.19.2",
-    "bootstrap": "^4.4.1",
-    "bootstrap-vue": "^2.4.0",
+    "bootstrap": "^4.5.0",
+    "bootstrap-vue": "^2.15.0",
     "connect-history-api-fallback": "^1.6.0",
-    "core-js": "^3.6.4",
+    "core-js": "^3.6.5",
     "express": "^4.17.1",
     "express-sslify": "^1.2.0",
     "vue": "^2.6.11",
-    "vue-carousel-card": "^1.0.3",
-    "vue-cookies": "^1.6.1",
+    "vue-carousel-card": "^1.0.5",
+    "vue-cookies": "^1.7.0",
     "vue-headful": "^2.1.0",
-    "vue-router": "^3.1.5"
+    "vue-router": "^3.3.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.2.0",
-    "@vue/cli-plugin-eslint": "^4.2.0",
-    "@vue/cli-service": "^4.2.0",
-    "babel-eslint": "^10.0.3",
+    "@vue/cli-plugin-babel": "^4.4.1",
+    "@vue/cli-plugin-eslint": "^4.4.1",
+    "@vue/cli-service": "^4.4.1",
+    "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.1.2",
+    "eslint-plugin-vue": "^6.2.2",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

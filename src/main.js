@@ -26,12 +26,15 @@ import {
 //import css
 import 'vue-carousel-card/styles/index.css'
 import '@/style/default.css'
+import VueCoreVideoPlayer from 'vue-core-video-player'
+
 
 //inject component global
 Vue.component(CarouselCard.name, CarouselCard)
 Vue.component(CarouselCardItem.name, CarouselCardItem)
 Vue.component('vue-headful', vueHeadful)
 Vue.use(VueRouter)
+Vue.use(VueCoreVideoPlayer)
 
 // Install BootstrapVue
 Vue.use(BootstrapVue)

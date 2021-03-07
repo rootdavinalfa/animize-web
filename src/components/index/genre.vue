@@ -12,7 +12,7 @@
         </div>
         <transition name="fade">
             <div v-if="animok">
-                <b-jumbotron header="Genre" lead="Show Anime By Genre">
+                <b-jumbotron class="card" header="Genre" lead="Show Anime By Genre">
                     <b-button v-b-toggle.collapse-genre variant="primary">Show Genre List</b-button>
                 </b-jumbotron>
                 <b-collapse id="collapse-genre" class="mt-2" v-model="listgenre">
@@ -190,11 +190,12 @@
         z-index: 10;
         transform: scale(1.1);
         color: white;
-        background-color: #FF3CAC;
-        background-image: linear-gradient(270deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+        background-color: #3d3d3d;
+        background-image: linear-gradient(270deg, #2653a8 0%, #2d63b6 50%, #4240d8 100%);
     }
 
     .card {
         margin: 20px;
+        background-color: #1d1d1d;
     }
 </style>

@@ -38,35 +38,44 @@
             </b-col>
           </b-row>
           <b-row>
-            <b-col md="auto">
-              <b-img-lazy
-                :src="anims.cover"
-                blank-src="/pimg.png"
-                fluid
-                height="200%"
-              ></b-img-lazy>
-            </b-col>
-            <b-col>
-              <b-jumbotron
-                fluid
-                header-level="4"
-                :header="anims.name_catalogue"
-                :lead="
-                  'Episode: ' + anims.episode_anim + ' ,Rating: ' + anims.rating
-                "
-              >
-                <b-button
-                  variant="outline-success"
-                  :to="'/anim/package/' + anims.package_anim"
-                  >See Package</b-button
-                >
-                <hr />
-                <p>{{ anims.synopsis }}</p>
-                <b-button variant="primary" :href="anims.source"
-                  >Download Sub Indo 480p</b-button
-                >
-              </b-jumbotron>
-            </b-col>
+            <b-card>
+              <b-row>
+                <b-col md="auto">
+                  <b-img-lazy
+                    :src="anims.cover"
+                    blank-src="/pimg.png"
+                    fluid
+                    height="200%"
+                  ></b-img-lazy>
+                </b-col>
+
+                <b-col class="card">
+                  <b-jumbotron
+                  class="card"
+                    fluid
+                    header-level="4"
+                    :header="anims.name_catalogue"
+                    :lead="
+                      'Episode: ' +
+                      anims.episode_anim +
+                      ' ,Rating: ' +
+                      anims.rating
+                    "
+                  >
+                    <b-button
+                      variant="outline-success"
+                      :to="'/anim/package/' + anims.package_anim"
+                      >See Package</b-button
+                    >
+                    <hr />
+                    <p>{{ anims.synopsis }}</p>
+                    <b-button variant="primary" :href="anims.source"
+                      >Download Sub Indo 480p</b-button
+                    >
+                  </b-jumbotron>
+                </b-col>
+              </b-row>
+            </b-card>
           </b-row>
         </b-container>
       </div>
@@ -139,6 +148,14 @@ vue-video-player {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
+
+.card {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        background-color: #1d1d1d;
+    }
 
 img {
   margin: 20px;

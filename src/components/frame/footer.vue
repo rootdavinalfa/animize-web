@@ -67,7 +67,6 @@
 
     footer {
         color: white;
-        background-color: rgb(14, 11, 12);
-        background-image: linear-gradient(270deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+        background-color: #000000;
     }
 </style>

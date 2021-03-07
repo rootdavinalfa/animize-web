@@ -1,7 +1,7 @@
 <template>
     <div id="new">
         <vue-headful v-if="!waiting_package" :title="'New Released - Page '+package_page" />
-        <b-jumbotron header="New Released" lead="New released / new added anime to Animize">
+        <b-jumbotron class="card" header="New Released" lead="New released / new added anime to Animize">
             <p>Below will be new added Anime by Animize admin.Check It Out!</p>
         </b-jumbotron>
         <div class="loading" v-if="waiting_package">
@@ -156,11 +156,12 @@
         z-index: 10;
         transform: scale(1.1);
         color: white;
-        background-color: #FF3CAC;
-        background-image: linear-gradient(270deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+        background-color: #3d3d3d;
+        background-image: linear-gradient(270deg, #2653a8 0%, #2d63b6 50%, #4240d8 100%);
     }
 
     .card {
         margin: 20px;
+        background-color: #1d1d1d;
     }
 </style>

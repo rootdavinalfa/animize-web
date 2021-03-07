@@ -28,8 +28,15 @@ import 'vue-carousel-card/styles/index.css'
 import '@/style/default.css'
 import VueCoreVideoPlayer from 'vue-core-video-player'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
 
 //inject component global
+library.add(faSearch)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component(CarouselCard.name, CarouselCard)
 Vue.component(CarouselCardItem.name, CarouselCardItem)
 Vue.component('vue-headful', vueHeadful)

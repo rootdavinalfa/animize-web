@@ -38,7 +38,7 @@
                         </b-col>
                     </b-row>
                     <b-row>
-                        <b-col>
+                        <b-col class="gray">
                             <b-card title="Synopsis" img-fluid>
                                 <hr>
                                 <b-card-text>
@@ -150,5 +150,6 @@
 
     .card {
         margin: 20px;
+        background-color: #1d1d1d;
     }
 </style>

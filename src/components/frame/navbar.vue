@@ -14,9 +14,18 @@
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
         <b-nav-form>
-          <b-form-input class="mr-sm-2" placeholder="Search Animize...." v-model="querysearch"
-            @keydown.enter.native="onEnterPressed"></b-form-input>
-          <b-button variant="outline-primary" id="btn" class="my-2 my-sm-0" :to="'/search/'+querysearch">Search
+          <b-form-input
+            class="mr-sm-2"
+            placeholder="Search Animize...."
+            v-model="querysearch"
+            @keydown.enter.native="onEnterPressed"
+          ></b-form-input>
+          <b-button
+            id="btn"
+            class="my-2 my-sm-0"
+            :to="'/search/' + querysearch"
+          >
+            <font-awesome-icon icon="search" />
           </b-button>
         </b-nav-form>
       </b-navbar-nav>
@@ -24,50 +33,48 @@
   </b-navbar>
 </template>
 <script>
-  export default {
-    name: 'navbar-top',
-    data() {
-      return {
-        querysearch: ""
-      }
+export default {
+  name: "navbar-top",
+  data() {
+    return {
+      querysearch: "",
+    };
+  },
+  methods: {
+    onEnterPressed() {
+      this.$router.push({
+        path: "/search/" + this.querysearch,
+      });
     },
-    methods: {
-      onEnterPressed() {
-        this.$router.push({
-          path: '/search/' + this.querysearch
-        })
-      }
-    },
-  }
+  },
+};
 </script>
 <style scoped>
-  @import url('https://fonts.googleapis.com/css?family=Slackey&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Slackey&display=swap");
 
-  .navbar-brand {
-    font-family: 'Slackey', cursive;
-    font-size: 2em;
-  }
+.navbar-brand {
+  font-family: "Slackey", cursive;
+  font-size: 2em;
+}
 
-  .nav-link {
-    font-size: 1.2em;
-  }
+.nav-link {
+  font-size: 1.2em;
+}
 
-  .navbar {
-    color: white;
-    background-color: #FF3CAC;
-    background-image: linear-gradient(270deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
-  }
+.navbar {
+  color: white;
+  background-color: #000000;
+}
 
-  .form-input {
-    height: 3em;
-  }
+.form-input {
+  height: 3em;
+}
 
-  #btn {
-    height: 2.5em;
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-  }
+#btn {
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
 </style>

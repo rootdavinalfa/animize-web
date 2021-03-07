@@ -66,6 +66,7 @@
         margin-right: 20px;
         margin-top: 5px;
         margin-bottom: 10px;
+        background-color: #1d1d1d;
     }
     #items-play{
         padding: 5px;
